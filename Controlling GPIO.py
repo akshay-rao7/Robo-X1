@@ -1,5 +1,5 @@
-import RPi.GPIO as gpio
-import time
+import RPi.GPIO as gpio #importing package
+import time #importing package
 
 
 def init():
