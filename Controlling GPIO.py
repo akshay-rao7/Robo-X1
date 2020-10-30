@@ -4,10 +4,10 @@ import time #importing package
 
 def init():
     gpio.setmode(gpio.BOARD)
-    gpio.setup(7, gpio.OUT)
-    gpio.setup(11, gpio.OUT)
-    gpio.setup(13, gpio.OUT)
-    gpio.setup(15, gpio.OUT)
+    gpio.setup(7, gpio.OUT) #initializing pin in1 of motor driver
+    gpio.setup(11, gpio.OUT) #initializing pin in2 of motor driver
+    gpio.setup(13, gpio.OUT) #initializing pin in3 of motor driver
+    gpio.setup(15, gpio.OUT) #initializing pin in4 of motor driver
     gpio.output(7, True)
     gpio.output(11, True)
 
