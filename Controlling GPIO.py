@@ -8,8 +8,8 @@ def init():
     gpio.setup(11, gpio.OUT) #initializing pin in2 of motor driver
     gpio.setup(13, gpio.OUT) #initializing pin in3 of motor driver
     gpio.setup(15, gpio.OUT) #initializing pin in4 of motor driver
-    gpio.output(7, True)
-    gpio.output(11, True)
+    gpio.output(7, True) #setting pin 7 to True
+    gpio.output(11, True) #setting pin 11 to True
 
 def forward(tf):
     gpio.output(13, True)
