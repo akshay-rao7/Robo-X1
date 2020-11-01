@@ -12,7 +12,7 @@ def init():
     gpio.output(11, True) #setting pin 11 to True
 
 def forward(tf):
-    gpio.output(13, True)
+    gpio.output(13, True)# Setting pin 13 to True
     gpio.output(15, False)
     time.sleep(tf)
 
