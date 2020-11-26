@@ -1,0 +1,105 @@
+import RPi.GPIO as gpio
+gpio.setwarnings(False)
+import time
+gpio.setmode(gpio.BCM)
+
+in1=23
+in2=24
+in3=25
+in4=26
+
+
+gpio.setup(in1, gpio.OUT)
+gpio.setup(in2, gpio.OUT)
+gpio.setup(in3, gpio.OUT)
+gpio.setup(in4, gpio.OUT)
+
+
+
+def init():
+    gpio.setup(in1, gpio.OUT)
+    gpio.setup(in2, gpio.OUT)
+    gpio.setup(in3, gpio.OUT)
+    gpio.setup(in4, gpio.OUT)
+
+
+def reverse(tf):
+    gpio.output(in1, True)
+    gpio.output(in2, False)
+    gpio.output(in3, True)
+    gpio.output(in4, False)
+    time.sleep(tf)
+
+def forward(tf):
+    gpio.output(in1, False)
+    gpio.output(in2, True)
+    gpio.output(in3, False)
+    gpio.output(in4, True)
+    time.sleep(tf)
+
+def left(tf):
+    gpio.output(in1, True)
+    gpio.output(in2, False)
+    gpio.output(in3, False)
+    gpio.output(in4, True)
+    time.sleep(tf)
+    
+def right(tf):
+    gpio.output(in1, False)
+    gpio.output(in2, True)
+    gpio.output(in3, True)
+    gpio.output(in4, False)
+    time.sleep(tf)
+
+init()
+
+right(0.2)
+left(0.2)
+right(0.2)
+left(0.2)
+forward(1)
+right(0.2)
+left(0.2)
+right(0.2)
+left(0.2)
+right(0.2)
+reverse(1)
+right(0.2)
+left(0.2)
+right(0.2)
+left(0.2)
+forward(1)
+right(0.2)
+left(0.2)
+right(0.2)
+left(0.2)
+right(0.2)
+reverse(1)
+right(0.2)
+left(0.2)
+right(0.2)
+left(0.2)
+forward(1)
+right(0.2)
+left(0.2)
+right(0.2)
+left(0.2)
+right(0.2)
+reverse(1)
+right(0.2)
+left(0.2)
+right(0.2)
+left(0.2)
+forward(1)
+right(0.2)
+left(0.2)
+right(0.2)
+left(0.2)
+right(0.2)
+reverse(1)
+
+
+gpio.cleanup()
+
+
+
